@@ -1,0 +1,99 @@
+<!-- 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+    
+     
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngFor="let elem of Links">
+            <a class="nav-link active" aria-current="page" [routerLink]="elem.Router" [routerLinkActive]="'active'">{{elem.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <header class="section-header w-100">
+
+    <nav class="navbar navbar-dark navbar-expand p-0 bg-dark w-100">
+    <div class="container-fluid">
+        <ul class="navbar-nav d-none d-md-flex mr-auto">
+            <li class="nav-item"  *ngFor="let elem of Links"><a class="nav-link"  data-abc="true" [routerLink]="elem.Router" [routerLinkActive]="'active'">{{elem.name}}</a></li>
+        </ul>
+        <!-- <ul class="navbar-nav d-flex align-items-center"> -->
+            <!-- <li class="nav-item">
+                 <div class="d-flex flex-row">
+                    <img src="https://i.imgur.com/EYFtR83.jpg" class="rounded-circle" width="30">
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  NomeDeCompte
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li class="nav-item" *ngFor="let elem of Linkscontact"><a class="dropdown-item" [routerLink]="elem.Router" [routerLinkActive]="'active'">{{elem.name}}</a></li>
+          
+                  
+                </ul>
+              </li> -->
+              <div ngbDropdown class="marg">
+                <button class="btn btn-dark" id="gfg" 
+                        ngbDropdownToggle>
+                          <img src="https://i.imgur.com/EYFtR83.jpg" class="rounded-circle" width="30">
+                    </button>
+                <div ngbDropdownMenu="gfg">
+                  <a ngbDropdownItem  routerLink="./profile" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Profile
+                  </a>
+                  <a ngbDropdownItem  routerLink="./about" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    About
+                  </a>
+                  <a ngbDropdownItem  routerLink="./fcq" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    FAQ
+                  </a>
+                  <a ngbDropdownItem  routerLink="./contact" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    ContactUs
+                  </a>
+                  <a ngbDropdownItem  routerLink="./login" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                  Logout
+                  </a>
+                </div>
+              </div>
+        <!-- list-inline //  -->
+      </div> <!-- navbar-collapse .// -->
+     <!-- container //  -->
+    </nav> <!-- header-top-light.// -->
+    
+    <section class="header-main border-bottom bg-white">
+        <div class="container-fluid">
+           <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+               <div class="col-md-2">
+                   <img  class="d-none d-md-flex" src="https://i.imgur.com/R8QhGhk.png" width="100">
+               </div>
+               <div class="col-md-8">
+            <div class="d-flex form-inputs">
+            <input class="form-control" type="text" placeholder="Search any product...">
+            <i class="bx bx-search"></i>
+            </div>
+               </div>
+               
+               
+           </div>
+        </div> 
+    </section>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item" *ngFor="let elem of LinksCategory">
+                <a class="nav-link"  data-abc="true" [routerLink]="elem.Router" [routerLinkActive]="'active'">{{elem.name}}</a>
+            </li>
+           
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    </header>

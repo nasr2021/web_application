@@ -1,0 +1,20 @@
+
+
+.profile-button{background: black;box-shadow: none;border: none;color:white;border-radius: 0;}
+.profile-button:hover{background: black;color:#e1a447;}
+.profile-button:focus{background: black;box-shadow: none ;color:#e1a447;}
+.profile-button:active{background: black;box-shadow: none;color:#e1a447;}
+
+.labels{font-size: 11px}
+.form-control{
+    border-radius: 0;
+    height: 40px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 13px;
+    border-bottom: 1px solid #512b08;
+    background: transparent;
+    font-family: 'Roboto';
+    box-shadow: none!important;
+}
