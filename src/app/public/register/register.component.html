@@ -4,29 +4,31 @@
         <div class="col-6 y ">
        <!---- <h3 class="text mt-3">welcom to <span class ="namsite">" My Web Site"</span> </h3>-->
         <h1 class="text"> sign up</h1>
+        <form (submit)="registerUser()">
         <div class="mb-3 mx-3">
             <label for="firstname" class="form-label label">First name</label>
-            <input type="text" class="form-control" id="firstname" placeholder="nasr">
+            <input type="text" class="form-control" [(ngModel)]="firstname" name="firstname" id="firstname" placeholder="nasr">
           </div>
           <div class="mb-3 mx-3">
             <label for="lastname" class="form-label label">Last name</label>
-            <input type="text" class="form-control" id="lastname" placeholder="intissar">
+            <input type="text" class="form-control" [(ngModel)]="lastname" name="lastname"   id="lastname" placeholder="intissar">
           </div>
           <div class="mb-3 mx-3">
             <label for="email" class="form-label label">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="example@gmail.com">
+            <input type="text" class="form-control" id="email"  [(ngModel)]="email" name="email" placeholder="example@gmail.com">
           </div>
           <div class="mb-3 mx-3">
             <label for="password" class="form-label label">Password</label>
-            <input type="text" class="form-control" id="password" placeholder="*****">
+            <input type="text" [(ngModel)]="password" name="password"   class="form-control" id="password" placeholder="*****">
           </div>
           <div class="mb-3 mx-3">
             <label for="Confirmpassword" class="form-label label">Confirm password</label>
-            <input type="text" class="form-control" id="Confirmpassword" placeholder="******">
+            <input type="text" class="form-control" id="Confirmpassword" [(ngModel)]="Confirmpassword" name="Confirmpassword"   placeholder="******">
           </div>
          
-          <div><button class="btn color mb-4 layout-btn" >Sign up</button></div>
-    <div class ="group-btn mb-3">
+          <div><button class="btn color mb-4 layout-btn"  type="submit"> Sign up</button></div>
+        </form> 
+          <div class ="group-btn mb-3">
       <img src='assets/svg/google.svg' class="rounded-circle border-img m-3 taille">
         <img src="assets/svg/facebook.svg "  class="rounded-circle border-img m-3 taille">
         <img src="assets/svg/Twitter.svg" class="rounded-circle border-img m-3 taille">

@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PublicComponent } from './public.component';
 import { ForgetComponent } from './forget/forget.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ForgetComponent } from './forget/forget.component';
   ],
   imports: [
     CommonModule,
-    PublicRoutingModule
+    PublicRoutingModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class PublicModule { }

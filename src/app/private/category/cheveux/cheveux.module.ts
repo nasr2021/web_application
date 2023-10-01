@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CheveuxRoutingModule } from './cheveux-routing.module';
 import { CheveuxComponent } from './cheveux.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CheveuxComponent } from './cheveux.component';
   ],
   imports: [
     CommonModule,
-    CheveuxRoutingModule
+    CheveuxRoutingModule,
+    HttpClientModule
   ]
 })
 export class CheveuxModule { }

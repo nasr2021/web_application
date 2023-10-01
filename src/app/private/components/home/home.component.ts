@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   [x: string]: any;
-
+all:any[]=[]
  
         
-  constructor() { }
+  constructor(private api:HomeService) { }
 
   ngOnInit(): void {
+    this.getAll();
+  }
+  getAll=()=>{
+    this.api.getAllProducts().subscribe(
+      data=>{
+        this.all=data
+        console.log(data)
+      }
+      ,error=>{
+        console.log(error)
+      }
+    )
   }
 
 }

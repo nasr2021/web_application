@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SoinService } from './soin.service';
 
 @Component({
   selector: 'app-soin',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoinComponent implements OnInit {
 
-  constructor() { }
+  Soin:any[]=[]
+  categoryName='Soin'
+  constructor(private api:SoinService) { }
 
   ngOnInit(): void {
+    this.getAllMaquillage()
   }
-
+  getAllMaquillage=()=> {
+    this.api.getSoin(this.categoryName).subscribe(
+      data=>{
+        this.Soin=data
+        console.log(data)
+      },
+      error=>{
+        console.log(error)
+      }
+    )
+  }
 }

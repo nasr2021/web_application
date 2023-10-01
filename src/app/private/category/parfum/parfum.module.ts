@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ParfumRoutingModule } from './parfum-routing.module';
 import { ParfumComponent } from './parfum.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ParfumComponent } from './parfum.component';
   ],
   imports: [
     CommonModule,
-    ParfumRoutingModule
+    ParfumRoutingModule,
+    HttpClientModule
   ]
 })
 export class ParfumModule { }

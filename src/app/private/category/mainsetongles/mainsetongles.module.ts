@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MainsetonglesRoutingModule } from './mainsetongles-routing.module';
 import { MainsetonglesComponent } from './mainsetongles.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MainsetonglesComponent } from './mainsetongles.component';
   ],
   imports: [
     CommonModule,
-    MainsetonglesRoutingModule
+    MainsetonglesRoutingModule,
+    HttpClientModule
   ]
 })
 export class MainsetonglesModule { }

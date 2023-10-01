@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DetailRoutingModule } from './detail-routing.module';
 import { DetailComponent } from './detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DetailComponent } from './detail.component';
   ],
   imports: [
     CommonModule,
-    DetailRoutingModule
+    DetailRoutingModule,
+    HttpClientModule
   ]
 })
 export class DetailModule { }

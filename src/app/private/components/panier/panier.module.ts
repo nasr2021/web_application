@@ -7,6 +7,7 @@ import { PanierComponent } from './panier.component';
 import { PaiementModule } from "../paiement/paiement.module";
 import { RouterModule } from '@angular/router';
 import { PaiementComponent } from '../paiement/paiement.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PaiementComponent } from '../paiement/paiement.component';
         CommonModule,
         PanierRoutingModule,
         RouterModule,
-        PaiementModule
+        PaiementModule,
+        HttpClientModule
     ]
 })
 export class PanierModule { }

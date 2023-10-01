@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CorpsRoutingModule } from './corps-routing.module';
 import { CorpsComponent } from './corps.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CorpsComponent } from './corps.component';
   ],
   imports: [
     CommonModule,
-    CorpsRoutingModule
+    CorpsRoutingModule,
+    HttpClientModule
   ]
 })
 export class CorpsModule { }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { VisageRoutingModule } from './visage-routing.module';
 import { VisageComponent } from './visage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { VisageComponent } from './visage.component';
   ],
   imports: [
     CommonModule,
-    VisageRoutingModule
+    VisageRoutingModule,
+    HttpClientModule
   ]
 })
 export class VisageModule { }

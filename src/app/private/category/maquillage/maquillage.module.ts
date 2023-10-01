@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MaquillageRoutingModule } from './maquillage-routing.module';
 import { MaquillageComponent } from './maquillage.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MaquillageComponent } from './maquillage.component';
   ],
   imports: [
     CommonModule,
-    MaquillageRoutingModule
+    MaquillageRoutingModule,
+    HttpClientModule
   ]
 })
 export class MaquillageModule { }

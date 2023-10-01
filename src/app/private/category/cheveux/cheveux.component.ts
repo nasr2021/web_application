@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CheveuxService } from './cheveux.service';
 
 @Component({
   selector: 'app-cheveux',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cheveux.component.scss']
 })
 export class CheveuxComponent implements OnInit {
-
-  constructor() { }
+  cheveux: any[] = [];
+   categoryName = 'cheveux';
+  constructor(private api: CheveuxService) { }
 
   ngOnInit(): void {
+    this.getall();
+  }
+  getall=()=>{
+    this.api.getCheveux(this.categoryName).subscribe(
+      data=>{
+        this.cheveux=data;
+        console.log(data);
+      },
+      error=>{
+        console.log(error);
+      }
+    )
   }
 
 }
